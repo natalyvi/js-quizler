@@ -63,7 +63,7 @@ export const createQuestions = (input = {}) => {
         const numberOfQuestion = question.split("-")[1];
         choices.forEach(choice => {
             if (numberOfQuestion === choice.split("-")[1]) {
-                questionForResult.choices.push(choice);
+                questionForResult.choices.push(input[choice]);
             }
         })
         result.push(questionForResult);
